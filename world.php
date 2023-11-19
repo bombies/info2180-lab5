@@ -18,8 +18,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 ?>
-<ul>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Continent</th>
+        <th>Independence</th>
+        <th>Head of State</th>
+    </tr>
     <?php foreach ($results as $row): ?>
-        <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
+        <tr>
+            <td><?= $row['name']; ?></td>
+            <td><?= $row['continent']; ?></td>
+            <td><?= $row['independence_year']; ?></td>
+            <td><?= $row['head_of_state']; ?></td>
+        </tr>
     <?php endforeach; ?>
-</ul>
+</table>
