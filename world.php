@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             <tr>
                 <td><?= $row['name']; ?></td>
                 <td><?= $row['district']; ?></td>
-                <td><?= $row['population']; ?></td>
+                <td><?= number_format($row['population']); ?></td>
             <tr>
         <?php else : ?>
             <td><?= $row['name']; ?></td>

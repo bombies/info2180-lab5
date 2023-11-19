@@ -1,1 +1,102 @@
-/* Add your own styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f2ffff;
+}
+
+
+header {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    padding: 4rem 0;
+
+    background-image: url("https://i.ajani.me/images/qab79.png");
+}
+
+header > h1 {
+    color: white;
+    align-self: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem 0;
+}
+
+#controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: #28ffa5;
+    border-color: #00be70;
+    color: #333;
+
+}
+
+.secondary-btn {
+    background-color: #84ffff;
+    border-color: #00cccc;
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+}
