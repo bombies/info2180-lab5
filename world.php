@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $country = filter_var($_GET['country'], FILTER_SANITIZE_STRING);
         $lookup = isset($_GET['lookup']) ? filter_var($_GET['lookup'], FILTER_SANITIZE_STRING) : null;
 
-        if ($lookup == 'cities')
+        if ($lookup === 'cities')
             $stmt = $conn->query("SELECT cities.name, cities.district, cities.population FROM cities JOIN countries ON cities.country_code = countries.code WHERE countries.name LIKE '%$country%'");
         else
             $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
