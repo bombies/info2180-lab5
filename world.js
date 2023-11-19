@@ -15,13 +15,12 @@ const work = (job) => {
 
 work(() => {
     const lookupButton = document.getElementById("lookup");
+    const lookupCitiesButton = document.getElementById("lookup_cities");
     const countryInput = document.getElementById("country");
 
-    lookupButton.addEventListener("click", async () => {
+    const doLookup = async (searchParams) => {
         try {
-            const search = countryInput.value
-            console.log(search)
-            const res = await fetch(`world.php?${new URLSearchParams({country: search})}`)
+            const res = await fetch(`world.php?${new URLSearchParams(searchParams)}`)
             const html = await res.text()
 
             const resultDiv = document.getElementById("result")
@@ -29,5 +28,14 @@ work(() => {
         } catch (e) {
             console.error(e)
         }
-    })
+    }
+
+    lookupButton.addEventListener("click", async () =>
+        doLookup({country: countryInput.value})
+    )
+
+    lookupCitiesButton.addEventListener("click", async () =>
+        doLookup({country: countryInput.value, lookup: "cities"})
+    )
+
 })
